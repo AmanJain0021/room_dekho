@@ -1,27 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Room Dekho - Guest Mode</title>
-    <link rel="stylesheet" href="guestMode.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guest Mode</title>
+    <link rel="stylesheet" href="guestMode.css" />
 </head>
+
 <body>
+    <nav class="navbar">
+        <div class="logo">RoomDekho</div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><button class="blue-button">Login</button></li>
+            <li><button class="blue-button">SignUp</button></li>
+        </ul>
+        <div class="menu-icon" id="menuIcon">&#9776;</div>
+    </nav>
 
-    <header>
-        <img class="logo" src="" alt="logo">
-        <nav>
-            <ul class="nav_links">
-                <li><a class="cta" href="#"><button>Login</button></a></li>
-                <li><a class="cta" href="#"><button>SignUp</button></a></li>
-                <li><a href="#">About Us</a></li>
+    <section class="search-section">
+        <div class="search-wrapper">
+            <h1>Find Properties in Your City</h1>
+            <div class="search-box">
+                <input type="text" placeholder="Enter city" class="location-input" />
+                <input type="text" placeholder="Search for locality, landmark, project, or builder"
+                    class="main-input" />
+                <button class="search-button">Search</button>
+            </div>
+        </div>
+    </section>
 
-            </ul>
-        </nav>
+    <section class="recommended-section">
+        <h2>Recommended Properties</h2>
+        <div class="property-slider">
 
-        
+            <div class="property-card">
+                <div class="card-image">
+                    <img src="f1.png" alt="Flat 1" />
+                    <span class="badge">25 Houses Available</span>
+                </div>
+                <div class="card-body">
+                    <h3>1 BHK Semi Furnished Flat</h3>
+                    <p class="tags">👨‍👩‍👧 Boys, Girls, Family</p>
+                    <div class="card-info">
+                        <p><strong>₹22,000</strong><br />Rent /month</p>
+                        <p><strong>3 Months</strong><br />Security Deposit</p>
+                        <p><strong>500 sq.ft</strong><br />Area</p>
+                    </div>
+                </div>
+            </div>
 
-    </header>
-    
+
+
+        </div>
+    </section>
+
+
+
+
+
+    <script src="guestMode.js"></script>
+
 </body>
-</html> 
+
+</html>

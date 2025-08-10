@@ -186,6 +186,12 @@ body {
     transform: translateY(0);
 }
 
+.search-wrapper h1 {
+        font-size: 22px;
+        color: #000;
+        text-shadow: 2px 2px 12px #c4c4c4;        
+    }
+
 
 @media (max-width: 768px) {
     .search-box {
@@ -209,7 +215,10 @@ body {
 
     .search-wrapper h1 {
         font-size: 22px;
+        
     }
+
+    
 }
 
 

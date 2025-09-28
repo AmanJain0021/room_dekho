@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Owner new</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="newp.css">
+</head>
+<body>
+ 
+    <!-- //navbar  -->
+     <nav class="navbar">
+        <div class="logo">RoomDekho</div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <!-- <li><button class="blue-button">Logout</button></li> -->
+            <!-- <li><button class="blue-button">Edit</button></li> -->
+           <div class="hamburger" onclick="toggleDropdown()"> 
+              <div></div>
+              <div></div>
+              <div></div>
+           </div>
+        </ul>
+        <div class="menu-icon" id="menuIcon">&#9776;</div>
+    </nav>
+  
+
+    <div class="container">
+   <!--Sidebar      -->
+<div class="sidebar">
+  <!-- Profile Picture -->
+  <img src="profile.png" alt="Owner" class="profile-pic" id="profilePic">
+  <input type="file" id="uploadPic" accept="image/*" style="display:none;" onchange="changeProfilePic(event)">
+  <button class="btn small-btn" onclick="document.getElementById('uploadPic').click()">Change Photo</button>
+
+  <!-- Owner Name -->
+  <div class="owner-name" id="ownerName">Aakash Prajapati</div>
+  <input type="text" id="editName" style="display:none; margin-top:10px; width:100%; padding:6px; border:1px solid #ccc; border-radius:6px;" maxlength="50">
+  <button class="btn small-btn" onclick="enableNameEdit()">Change Name</button>
+
+  <div class="verified"><i class="fa-solid fa-circle-check"></i> Verified Owner</div>
+
+  <div class="verification-status">
+    <h4>Verification Status</h4>
+    <p><i class="fa-solid fa-phone text-success"></i> Phone Verified</p>
+    <p><i class="fa-solid fa-envelope text-success"></i> Email Verified</p>
+    <p><i class="fa-solid fa-id-card"></i> ID Proof Pending</p>
+  </div>
+
+  <button class="btn">View Properties</button>
+  <button class="btn logout">Logout</button>
+     
+    </div> 
+
+
+    <!-- Main Content -->
+    <div class="main">
+     
+      <!-- My Activity -->
+      <div class="card">
+        <h3>My Dashboard</h3>
+        <div class="stats">
+          <div class="stat-box">
+            <i class="fa-solid fa-home" style="color:#007bff;"></i>
+            <p>8</p>
+            <small>Listed Properties</small>
+          </div>
+          <div class="stat-box">
+            <i class="fa-solid fa-eye" style="color:#28a745;"></i>
+            <p>350+</p>
+            <small>Total Views</small>
+          </div>
+          <div class="stat-box">
+            <i class="fa-solid fa-envelope" style="color:#ffc107;"></i>
+            <p>45</p>
+            <small>Inquiries</small>
+          </div>
+        </div>
+      </div>
+
+      
+<!-- About section    -->
+<div class="card" id="aboutCard">
+  <h3>
+    About Me 
+    <i class="fa-solid fa-pen edit-icon" onclick="enableEdit()"></i>
+  </h3>
+  <p id="aboutText">
+    Hello! I am Aakash Prajapati, a property owner in Mumbai with multiple rental listings. 
+    I focus on providing clean, safe, and affordable rental options for families and working professionals.
+  </p>
+  
+  <!-- Editable textarea (hidden by default) -->
+  <textarea id="aboutInput" maxlength="1000" style="display:none;"></textarea>
+  <p id="charCount" style="display:none; font-size: 12px; color: gray;">
+    Character limit: 0 / 1000
+  </p>
+  <button id="saveBtn" style="display:none;" onclick="saveAbout()">Save</button>
+</div>
+
+      <!-- My Preferences -->
+      <div class="card">
+        <h3>Property Management</h3>
+        <div class="preferences">
+          <div class="pref-box"><b>Total Listings:</b> 8</div>
+          <div class="pref-box"><b>Active Properties:</b> 5</div>
+          <div class="pref-box"><b>Occupied:</b> 3</div>
+          <div class="pref-box"><b>City:</b> Mumbai</div>
+          <div class="pref-box"><b>Specialization:</b> 1BHK & 2BHK Flats</div>
+          <div class="pref-box"><b>Boosted Ads:</b> 2 Active</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="newp.js"></script>
+</body>
+</html>

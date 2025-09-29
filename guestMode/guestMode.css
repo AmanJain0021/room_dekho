@@ -4,7 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
+} 
 
 body {
     font-family: "Poppins", monospace;
@@ -51,7 +51,11 @@ body {
 }
 
 .nav-links li a:hover {
-    color: #0056b3;
+   .nav-links li {
+    padding: 0;
+    margin: 0;
+}
+ color: #0056b3;
 }
 
 .menu-icon {
@@ -300,3 +304,103 @@ body {
     justify-content: space-between;
     font-size: 13px;
 }
+
+/* room card */
+
+ .card {
+      display: flex;
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      overflow: hidden;
+      margin-bottom: 20px;
+      margin-left: 40px;
+      margin-right: 40px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+    }
+    .card img {
+      width: 220px;
+      height: 175px;
+      object-fit: cover;
+    }
+    .card-content {
+      flex: 1;
+      padding: 15px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .card h3 {
+      margin: 0;
+      font-size: 18px;
+      color: #000000;
+    }
+    .location {
+      font-size: 14px;
+      color: #666;
+      margin: 5px 0;
+    }
+    .details {
+      display: flex;
+      gap: 80px;
+      margin-left: 0px;
+      margin-right: 9rem;
+      padding: 0.5rem;
+      font-size: 14px;
+      color: #6d6b6b;
+      border: solid 1px rgb(209, 204, 204);
+      border-radius: 1rem;
+      background-color: #f7f7f7;
+    }
+    .icon {
+        margin-right: 20px;
+    }
+    .value {
+        color: black;
+        margin-left: 1.3rem;
+    }
+
+    .price-section {
+      text-align: right;
+      min-width: 140px;
+      padding: 15px;
+      border-left: 1px solid #eee;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .price {
+      font-size: 18px;
+      font-weight: bold;
+      color: #111;
+    }
+    .price small {
+      display: block;
+      font-size: 12px;
+      color: #777;
+      margin-bottom: 8px;
+    }
+    .btn {
+      display: inline-block;
+      padding: 8px 12px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: bold;
+      text-align: center;
+      margin: 4px 0;
+    }
+    .btn-red {
+      background: #e63946;
+      color: #fff;
+    }
+    .btn-outline {
+      border: 1px solid #ccc;
+      background: #fff;
+      color: #444;
+    }
+    .owner {
+      font-size: 13px;
+      color: #444;
+      margin-top: 5px;
+    }

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Renter Profile</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="profile-page-wrapper">
+        <header class="navbar">
+            <a href="#" class="logo">RoomDekho</a>
+            <nav class="nav-links">
+                <a href="#">Properties</a>
+                <a href="#">Saved</a>
+                <a href="#">Applications</a>
+                <a href="#" class="active-link">Profile</a>
+            </nav>
+        </header>
+
+        <div class="profile-container">
+            <h1 class="page-title">My Renter Profile</h1>
+            <div class="profile-layout">
+                
+                <aside class="profile-sidebar">
+                    <div class="profile-card profile-details">
+                        <div class="profile-pic-wrapper">
+                            <img src="https://via.placeholder.com/150" alt="Profile Picture" class="profile-pic">
+                        </div>
+                        <h2 class="profile-name">Arjun Sharma</h2>
+                        <p class="profile-status"><i class="fas fa-check-circle"></i> Verified Renter</p>
+                        <a href="#" class="edit-btn"><i class="fas fa-edit"></i> Edit Profile</a>
+                    </div>
+
+                    <div class="profile-card profile-status-card">
+                        <h3 class="card-title">Verification Status</h3>
+                        <ul class="status-list">
+                            <li><i class="fas fa-check-circle verified"></i> Phone Verified</li>
+                            <li><i class="fas fa-check-circle verified"></i> Email Verified</li>
+                            <li><i class="fas fa-exclamation-triangle pending"></i> ID Proof Pending</li>
+                        </ul>
+                    </div>
+
+                    <div class="profile-card profile-actions">
+                        <button class="btn btn-primary">View My Applications</button>
+                        <button class="btn btn-secondary">Logout</button>
+                    </div>
+                </aside>
+
+                <main class="profile-content">
+                    <div class="profile-card">
+                        <h3 class="card-title">My Activity</h3>
+                        <div class="activity-grid">
+                            <div class="activity-item applied">
+                                <i class="fas fa-paper-plane icon-bg"></i>
+                                <p class="activity-count">4</p>
+                                <p class="activity-label">Applied Listings</p>
+                            </div>
+                            <div class="activity-item saved">
+                                <i class="fas fa-heart icon-bg"></i>
+                                <p class="activity-count">12</p>
+                                <p class="activity-label">Saved Properties</p>
+                            </div>
+                            <div class="activity-item visited">
+                                <i class="fas fa-eye icon-bg"></i>
+                                <p class="activity-count">6</p>
+                                <p class="activity-label">Visited Properties</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="profile-card">
+                        <h3 class="card-title">About Me</h3>
+                        <p>Hello! I am a software engineer looking for a furnished 2BHK in a safe locality. I am a non-smoker, have no pets, and am ready to move in by next month.</p>
+                    </div>
+    
+                    <div class="profile-card">
+                        <h3 class="card-title">My Preferences</h3>
+                        <div class="preferences-grid">
+                            <div class="preference-item">
+                                <p><strong>Property Type:</strong></p>
+                                <p>Flat / Apartment (2BHK)</p>
+                            </div>
+                            <div class="preference-item">
+                                <p><strong>Rent Budget:</strong></p>
+                                <p>₹15,000 - ₹20,000</p>
+                            </div>
+                            <div class="preference-item">
+                                <p><strong>Preferred Area:</strong></p>
+                                <p>HSR Layout, Bangalore</p>
+                            </div>
+                            <div class="preference-item">
+                                <p><strong>Move-in Date:</strong></p>
+                                <p>October 2025</p>
+                            </div>
+                            <div class="preference-item">
+                                <p><strong>Furnishing:</strong></p>
+                                <p>Fully Furnished</p>
+                            </div>
+                            <div class="preference-item">
+                                <p><strong>Occupation:</strong></p>
+                                <p>Software Engineer</p>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

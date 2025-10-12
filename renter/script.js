@@ -1,28 +1,53 @@
-// This script is for any future interactive functionality.
-// The current UI is static and does not require JavaScript.
-
 document.addEventListener('DOMContentLoaded', () => {
-    console.log('Renter Profile page loaded!');
+    console.log('Renter Profile Dashboard Loaded!');
 
-    // Example of a click listener for the edit button
-    const editBtn = document.querySelector('.edit-btn');
-    if (editBtn) {
-        editBtn.addEventListener('click', (e) => {
-            e.preventDefault();
-            alert('Edit profile functionality will be implemented here!');
-        });
-    }
+    // --- On-Scroll Animation Logic ---
+    const scrollElements = document.querySelectorAll('.animate-on-scroll');
 
-    // Example of a click listener for the logout button
-    const logoutBtn = document.querySelector('.btn-secondary');
-    if (logoutBtn) {
-        logoutBtn.addEventListener('click', (e) => {
-            e.preventDefault();
-            if (confirm('Are you sure you want to log out?')) {
-                // In a real app, you would redirect to the login page or clear session data
-                alert('Logged out successfully!');
-                console.log('User has been logged out.');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            // When the element is in view
+            if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+                // Animate numbers only when the parent section is visible
+                if(entry.target.querySelector('.activity-grid')) {
+                    animateCounters();
+                }
+                // Stop observing the element after it has become visible
+                observer.unobserve(entry.target);
             }
         });
+    }, {
+        threshold: 0.1 // Trigger when 10% of the element is visible
+    });
+
+    scrollElements.forEach(el => {
+        observer.observe(el);
+    });
+
+
+    // --- Animated Counter Logic ---
+    function animateCounters() {
+        const counters = document.querySelectorAll('.activity-count');
+        const speed = 200; // The lower the number, the faster the count
+
+        counters.forEach(counter => {
+            const updateCount = () => {
+                const target = +counter.getAttribute('data-target');
+                const count = +counter.innerText;
+
+                // Calculate the increment
+                const inc = Math.ceil(target / speed);
+
+                if (count < target) {
+                    counter.innerText = Math.min(count + inc, target);
+                    setTimeout(updateCount, 15);
+                } else {
+                    counter.innerText = target;
+                }
+            };
+            updateCount();
+        });
     }
+
 });

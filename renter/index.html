@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Renter Profile Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="navbar">
+        <a href="#" class="logo">RoomDekho</a>
+        <nav class="nav-links">
+            <a href="#">Properties</a>
+            <a href="#">Saved</a>
+            <a href="#">Applications</a>
+            <a href="#" class="active-link">Profile</a>
+        </nav>
+    </header>
+
+    <div class="profile-dashboard">
+        <section class="profile-header">
+            <div class="profile-pic-wrapper">
+                <img src="a.jpg" alt="Profile Picture" class="profile-pic">
+                <div class="edit-pic-icon" title="Change Picture">
+                    <i class="fas fa-camera"></i>
+                </div>
+            </div>
+            <h1 class="profile-name">Aman Jain</h1>
+            <p class="profile-status"><i class="fas fa-check-circle"></i> Verified Renter</p>
+            <div class="verification-status">
+                <div class="status-item" title="Phone Verified"><i class="fas fa-check-circle verified"></i><span>Phone</span></div>
+                <div class="status-item" title="Email Verified"><i class="fas fa-check-circle verified"></i><span>Email</span></div>
+                <div class="status-item" title="ID Proof Pending"><i class="fas fa-exclamation-triangle pending"></i><span>ID Proof</span></div>
+            </div>
+        </section>
+
+        <main class="profile-content">
+            <section class="profile-section animate-on-scroll">
+                <h2 class="section-title">My Activity</h2>
+                <div class="activity-grid">
+                    <div class="activity-card">
+                        <i class="fas fa-paper-plane icon applied"></i>
+                        <p class="activity-count" data-target="4">0</p>
+                        <p class="activity-label">Applied</p>
+                    </div>
+                    <div class="activity-card">
+                        <i class="fas fa-heart icon saved"></i>
+                        <p class="activity-count" data-target="12">0</p>
+                        <p class="activity-label">Saved</p>
+                    </div>
+                    <div class="activity-card">
+                        <i class="fas fa-eye icon visited"></i>
+                        <p class="activity-count" data-target="6">0</p>
+                        <p class="activity-label">Visited</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="profile-section animate-on-scroll">
+                <h2 class="section-title">My Details</h2>
+                <div class="details-grid">
+                    <div class="details-card about-me">
+                        <h3><i class="fas fa-user-circle"></i> About Me</h3>
+                        <p>Hello! I am a software engineer looking for a furnished 2BHK in a safe locality. I am a non-smoker, have no pets, and am ready to move in by next month.</p>
+                         <a href="#" class="edit-link"><i class="fas fa-edit"></i> Edit</a>
+                    </div>
+                    <div class="details-card preferences">
+                        <h3><i class="fas fa-sliders-h"></i> My Preferences</h3>
+                        <ul>
+                            <li><strong>Type:</strong> Flat / Apartment (2BHK) <a href="#" class="edit-link-inline"><i class="fas fa-edit"></i></a></li>
+                            <li><strong>Budget:</strong> ₹15,000 - ₹20,000 <a href="#" class="edit-link-inline"><i class="fas fa-edit"></i></a></li>
+                            <li><strong>Area:</strong> HSR Layout, Bangalore <a href="#" class="edit-link-inline"><i class="fas fa-edit"></i></a></li>
+                            <li><strong>Move-in:</strong> October 2025 <a href="#" class="edit-link-inline"><i class="fas fa-edit"></i></a></li>
+                            <li><strong>Furnishing:</strong> Fully Furnished <a href="#" class="edit-link-inline"><i class="fas fa-edit"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="profile-section animate-on-scroll">
+                 <h2 class="section-title">Actions</h2>
+                 <div class="actions-container">
+                      <button class="btn btn-primary"><i class="fas fa-file-alt"></i> View My Applications</button>
+                      <button class="btn btn-secondary"><i class="fas fa-sign-out-alt"></i> Logout</button>
+                 </div>
+            </section>
+        </main>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

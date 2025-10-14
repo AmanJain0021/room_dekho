@@ -187,8 +187,9 @@ body {
 }
 
 .search-wrapper h1 {
-        font-size: 22px;
-        color: #000;
+        font-size: 30px;
+        /* color: #423737; */
+        color: rgb(53, 53, 116);
         text-shadow: 2px 2px 12px #c4c4c4;        
     }
 

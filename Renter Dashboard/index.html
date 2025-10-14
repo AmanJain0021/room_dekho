@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RoomDekho - Find Your Perfect Room</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Link to the external CSS file -->
+    <link rel="stylesheet" href="style.css">
+     <style>
+
+
+
+     </style>
+</head>
+<body>
+
+    <!-- SVG Icons Definition (for cleaner HTML) -->
+    <svg width="0" height="0" style="display:none;">
+        <symbol id="icon-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></symbol>
+        <symbol id="icon-location" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></symbol>
+        <symbol id="icon-filters" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="21" x2="4" y2="14"></line><line x1="4" y1="10" x2="4" y2="3"></line><line x1="12" y1="21" x2="12" y2="12"></line><line x1="12" y1="8" x2="12" y2="3"></line><line x1="20" y1="21" x2="20" y2="16"></line><line x1="20" y1="12" x2="20" y2="3"></line><line x1="1" y1="14" x2="7" y2="14"></line><line x1="9" y1="8" x2="15" y2="8"></line><line x1="17" y1="16" x2="23" y2="16"></line></symbol>
+        <symbol id="icon-heart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></symbol>
+        <symbol id="icon-home" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></symbol>
+    </svg>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container navbar">
+            <div class="nav-left">
+                <a href="#" class="logo">RoomDekho</a>
+                <nav class="nav-links">
+                    <a href="#">Browse Rooms</a>
+                    <a href="#">PG/Hostels</a>
+                    <a href="#">Shared Spaces</a>
+                    <a href="#">Help</a>
+                </nav>
+            </div>
+            <div class="nav-right">
+                <div class="nav-location">
+                     <svg width="20" height="20"><use href="#icon-location"></use></svg>
+                     <span>Pune, Maharashtra</span>
+                </div>
+                <div class="nav-user">
+                    <img src="https://i.pravatar.cc/40?u=rahul" alt="User Avatar">
+                    <span>Rahul Sharma</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+        
+        <!-- Hero and Search Section -->
+        <section class="hero">
+            <h1>Find Your Perfect Room</h1>
+            <p>Discover Comfortable and Affordable Rooms across India</p>
+
+            <div class="search-wrapper">
+                <svg class="search-icon" width="20" height="20"><use href="#icon-search"></use></svg>
+                <input type="text" placeholder="Search by city, locality, or landmark (e.g., MG Road, Pune)" class="search-input">
+                <div class="search-buttons">
+                    <button class="btn btn-dark"><svg width="18" height="18"><use href="#icon-filters"></use></svg> Filters</button>
+                    <button class="btn btn-primary"><svg width="18" height="18"><use href="#icon-location"></use></svg> Near Me</button>
+                </div>
+            </div>
+
+            <div class="quick-filters">
+                <button class="quick-filter-btn">1BHK</button>
+                <button class="quick-filter-btn">2BHK</button>
+                <button class="quick-filter-btn">PG</button>
+                <button class="quick-filter-btn">Hostel</button>
+                <button class="quick-filter-btn">Furnished</button>
+                <button class="quick-filter-btn">WiFi</button>
+                <button class="quick-filter-btn">AC</button>
+            </div>
+        </section>
+
+        <!-- Filter Bar and Student Banner -->
+        <section>
+            <div class="filter-bar">
+                <!-- Filter content can be added here -->
+                <span>Price Range: ...</span>
+                <span>Duration: ...</span>
+                <span>Amenities: ...</span>
+                <span>Sort by: ...</span>
+            </div>
+            <div class="student-banner" id="student-banner">
+                <p><b>Because you're a Student</b> &rarr; PG & Hostel rooms shown first</p>
+                <button class="close-btn" id="close-banner-btn">&times;</button>
+            </div>
+        </section>
+
+        <!-- Available Rooms Section -->
+        <section class="listings-section">
+            <div class="listings-header">
+                <div>
+                    <h2>Available Rooms</h2>
+                    <p>1,247 rooms found in Pune</p>
+                </div>
+            </div>
+
+            <div class="listings-grid">
+                 <!-- Card 1 -->
+                <article class="room-card">
+                    <div class="card-img-container">
+                        <img class="card-img" src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=400" alt="Modern Apartment">
+                        <div class="card-tag tag-green">Available Now</div>
+                        <button class="like-btn"><svg width="20" height="20"><use href="#icon-heart"></use></svg></button>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-header">
+                            <p class="card-price">₹8,500<span>/month</span></p>
+                            <p class="card-rating">⭐ 4.8 <span>(24)</span></p>
+                        </div>
+                        <h3 class="card-title">Spacious 1BHK in Koregaon Park</h3>
+                        <p class="card-location">Near Pune University, Koregaon Park</p>
+                        <div class="card-footer">
+                           <div class="card-amenities">
+                               <span>1BHK, Furnished</span>
+                               <span>+3 more</span>
+                           </div>
+                           <div class="card-owner">
+                               <button class="btn btn-dark contact-btn">Contact Owner</button>
+                           </div>
+                        </div>
+                    </div>
+                </article>
+                 <!-- Card 2 -->
+                <article class="room-card">
+                    <div class="card-img-container">
+                        <img class="card-img" src="https://images.unsplash.com/photo-1615875605825-5eb9bb5c683b?q=80&w=400" alt="Premium PG">
+                        <div class="card-tag tag-blue">Premium PG</div>
+                        <button class="like-btn"><svg width="20" height="20"><use href="#icon-heart"></use></svg></button>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-header">
+                            <p class="card-price">₹12,000<span>/month</span></p>
+                            <p class="card-rating">⭐ 4.9 <span>(89)</span></p>
+                        </div>
+                        <h3 class="card-title">Premium PG with AC Rooms</h3>
+                        <p class="card-location">Aundh, Near IT Companies</p>
+                        <div class="card-footer">
+                           <div class="card-amenities">
+                               <span>Single, AC</span>
+                               <span>+5 more</span>
+                           </div>
+                           <div class="card-owner">
+                               <button class="btn btn-dark contact-btn">Contact Owner</button>
+                           </div>
+                        </div>
+                    </div>
+                </article>
+                <!-- Card 3 -->
+                <article class="room-card">
+                    <div class="card-img-container">
+                        <img class="card-img" src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?q=80&w=400" alt="Shared Room">
+                        <div class="card-tag tag-orange">Shared Room</div>
+                        <button class="like-btn"><svg width="20" height="20" fill="red" stroke="red"><use href="#icon-heart"></use></svg></button>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-header">
+                            <p class="card-price">₹9,800<span>/month</span></p>
+                            <p class="card-rating">⭐ 4.7 <span>(67)</span></p>
+                        </div>
+                        <h3 class="card-title">Shared Room in 2BHK</h3>
+                        <p class="card-location">Baner, Near Pune IT Park</p>
+                         <div class="card-footer">
+                           <div class="card-amenities">
+                               <span>Double, Semi-Furnished</span>
+                               <span>+2 more</span>
+                           </div>
+                           <div class="card-owner">
+                               <button class="btn btn-dark contact-btn">Contact Owner</button>
+                           </div>
+                        </div>
+                    </div>
+                </article>
+                <!-- Card 4 -->
+                 <article class="room-card">
+                    <div class="card-img-container">
+                        <img class="card-img" src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?q=80&w=400" alt="Girls Hostel">
+                        <div class="card-tag tag-pink">Girls Hostel</div>
+                        <button class="like-btn"><svg width="20" height="20"><use href="#icon-heart"></use></svg></button>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-header">
+                            <p class="card-price">₹7,200<span>/month</span></p>
+                            <p class="card-rating">⭐ 4.6 <span>(42)</span></p>
+                        </div>
+                        <h3 class="card-title">Safe Hostel for Working Women</h3>
+                        <p class="card-location">Hinjewadi, Phase 1</p>
+                        <div class="card-footer">
+                           <div class="card-amenities">
+                               <span>Triple, Hostel</span>
+                               <span>+4 more</span>
+                           </div>
+                           <div class="card-owner">
+                               <button class="btn btn-dark contact-btn">Contact Owner</button>
+                           </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <div class="load-more-container">
+                <button class="btn btn-dark">Load More Rooms</button>
+            </div>
+        </section>
+
+        <!-- Popular Areas, Trending, and Testimonials Sections... -->
+        <!-- These sections can be added here following the same HTML structure as before -->
+
+    </main>
+    
+    <!-- Footer -->
+    <footer class="footer">
+         <!-- Footer content goes here -->
+    </footer>
+
+    <!-- Link to the external JavaScript file -->
+    <script src="script.js"></script>
+
+</body>
+</html>
+
